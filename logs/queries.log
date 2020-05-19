@@ -4629,3 +4629,53 @@
             )
             WHERE kcu.TABLE_SCHEMA = 'sembako_db' AND kcu.TABLE_NAME = 'transactionstatus' AND rc.TABLE_NAME = 'transactionstatus'
 2020-05-05 05:16:21 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'transactionstatus'
+2020-05-05 11:44:39 Debug: duration=25 rows=8 SHOW FULL COLUMNS FROM `users`
+2020-05-05 11:44:39 Debug: duration=0 rows=3 SHOW INDEXES FROM `users`
+2020-05-05 11:44:39 Debug: duration=1 rows=1 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'sembako_db' AND kcu.TABLE_NAME = 'users' AND rc.TABLE_NAME = 'users'
+2020-05-05 11:44:39 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'users'
+2020-05-05 11:44:39 Debug: duration=7 rows=2 SHOW FULL COLUMNS FROM `roles`
+2020-05-05 11:44:39 Debug: duration=0 rows=1 SHOW INDEXES FROM `roles`
+2020-05-05 11:44:39 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'sembako_db' AND kcu.TABLE_NAME = 'roles' AND rc.TABLE_NAME = 'roles'
+2020-05-05 11:44:39 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'roles'
+2020-05-05 11:44:39 Debug: duration=0 rows=0 SELECT Users.id AS `Users__id`, Users.username AS `Users__username`, Users.password AS `Users__password`, Users.email AS `Users__email`, Users.role_id AS `Users__role_id`, Users.activated AS `Users__activated`, Users.created AS `Users__created`, Users.modified AS `Users__modified`, Roles.id AS `Roles__id`, Roles.role_name AS `Roles__role_name` FROM users Users INNER JOIN roles Roles ON Roles.id = (Users.role_id) LIMIT 20 OFFSET 0
+2020-05-05 11:44:39 Debug: duration=2 rows=1 SELECT (COUNT(*)) AS `count` FROM users Users INNER JOIN roles Roles ON Roles.id = (Users.role_id)
+2020-05-05 11:44:42 Debug: duration=0 rows=0 SELECT Roles.id AS `Roles__id`, Roles.role_name AS `Roles__role_name` FROM roles Roles LIMIT 20 OFFSET 0
+2020-05-05 11:44:42 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM roles Roles
+2020-05-05 11:44:43 Debug: duration=0 rows=0 SELECT Users.id AS `Users__id`, Users.username AS `Users__username`, Users.password AS `Users__password`, Users.email AS `Users__email`, Users.role_id AS `Users__role_id`, Users.activated AS `Users__activated`, Users.created AS `Users__created`, Users.modified AS `Users__modified`, Roles.id AS `Roles__id`, Roles.role_name AS `Roles__role_name` FROM users Users INNER JOIN roles Roles ON Roles.id = (Users.role_id) LIMIT 20 OFFSET 0
+2020-05-05 11:44:43 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM users Users INNER JOIN roles Roles ON Roles.id = (Users.role_id)
+2020-05-05 12:17:44 Debug: duration=11 rows=2 SHOW FULL COLUMNS FROM `roles`
+2020-05-05 12:17:45 Debug: duration=0 rows=1 SHOW INDEXES FROM `roles`
+2020-05-05 12:17:45 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'sembako_db' AND kcu.TABLE_NAME = 'roles' AND rc.TABLE_NAME = 'roles'
+2020-05-05 12:17:45 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'roles'
+2020-05-05 12:17:45 Debug: duration=0 rows=0 SELECT Roles.id AS `Roles__id`, Roles.role_name AS `Roles__role_name` FROM roles Roles LIMIT 20 OFFSET 0
+2020-05-05 12:17:45 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM roles Roles
+2020-05-05 12:17:48 Debug: duration=11 rows=8 SHOW FULL COLUMNS FROM `users`
+2020-05-05 12:17:48 Debug: duration=0 rows=3 SHOW INDEXES FROM `users`
+2020-05-05 12:17:48 Debug: duration=1 rows=1 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'sembako_db' AND kcu.TABLE_NAME = 'users' AND rc.TABLE_NAME = 'users'
+2020-05-05 12:17:48 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'users'
+2020-05-05 12:17:48 Debug: duration=0 rows=0 SELECT Users.id AS `Users__id`, Users.username AS `Users__username`, Users.password AS `Users__password`, Users.email AS `Users__email`, Users.role_id AS `Users__role_id`, Users.activated AS `Users__activated`, Users.created AS `Users__created`, Users.modified AS `Users__modified`, Roles.id AS `Roles__id`, Roles.role_name AS `Roles__role_name` FROM users Users INNER JOIN roles Roles ON Roles.id = (Users.role_id) LIMIT 20 OFFSET 0
+2020-05-05 12:17:48 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM users Users INNER JOIN roles Roles ON Roles.id = (Users.role_id)
